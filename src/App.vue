@@ -1,7 +1,9 @@
 <template>
   <Header />
   <Navbar />
-  <main class="main"></main>
+  <main class="main">
+    <Home />
+  </main>
   <Footer />
 </template>
 
@@ -9,9 +11,10 @@
 import Header from "@/components/Header/Header";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import Home from "@/pages/Home/Home";
 export default {
   name: "App",
-  components: { Header, Navbar, Footer },
+  components: { Header, Navbar, Footer, Home },
 };
 </script>
 

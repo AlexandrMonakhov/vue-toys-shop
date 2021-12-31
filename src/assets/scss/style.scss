@@ -60,7 +60,8 @@ body {
 }
 
 body {
-  background-color: var(--main-color);
+  background: var(--main-color) url("../img/pattern.png");
+  background-size: cover;
   font-family: var(--regular-font);
   color: var(--text-color);
   margin: 0;
@@ -87,6 +88,7 @@ body {
 
 .button {
   background: var(--linear-gradient);
+  border: none;
   border-radius: var(--border-radius);
   font-family: var(--bold-font);
   font-size: 16px;
