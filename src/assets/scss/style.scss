@@ -9,12 +9,12 @@
     #ea9508 39.09%,
     #da6e0b 100%
   );
-  --text-color: #3a230b;
+  --text-color: #44290e;
   --placeholder-color: rgba(58, 35, 11, 0.73);
 
-  --regular-font: "PTSans-Regular";
-  --bold-font: "PTSans-Bold";
-  --section-font: "Lifehack Sans";
+  --regular-font: "PTSans-Regular", sans-serif;
+  --bold-font: "PTSans-Bold", sans-serif;
+  --section-font: "Lifehack Sans", sans-serif;
 
   --border-radius: 30px;
 }
@@ -48,16 +48,35 @@
     url("../fonts/Lifehack Sans.woff2") format("woff2");
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+}
+
 body {
   background-color: var(--main-color);
-  font-family: var(--regular-font), sans-serif;
+  font-family: var(--regular-font);
   color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
 .section-title {
-  font-family: var(--section-font), sans-serif;
+  font-family: var(--section-font);
   font-size: 50px;
   line-height: 60px;
+}
+
+.logo {
+  width: 133px;
+  height: 30px;
+  object-fit: contain;
 }
 
 .container {
@@ -72,4 +91,37 @@ body {
   font-family: var(--bold-font);
   font-size: 16px;
   line-height: 21px;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+button:focus,
+input,
+input:focus,
+select,
+select:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
 }
