@@ -1,0 +1,75 @@
+:root {
+  --main-color: #ffffff;
+  --secondary-color: #f1ddc8;
+  --dark-color: #3a230b;
+  --elements-color: #dca367;
+  --linear-gradient: linear-gradient(
+    90deg,
+    #f3a50c 0%,
+    #ea9508 39.09%,
+    #da6e0b 100%
+  );
+  --text-color: #3a230b;
+  --placeholder-color: rgba(58, 35, 11, 0.73);
+
+  --regular-font: "PTSans-Regular";
+  --bold-font: "PTSans-Bold";
+  --section-font: "Lifehack Sans";
+
+  --border-radius: 30px;
+}
+
+@font-face {
+  font-family: "PTSans-Regular";
+  src: url("../fonts/PTSans-Regular.eot");
+  src: url("../fonts/PTSans-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/PTSans-Regular.ttf") format("truetype"),
+    url("../fonts/PTSans-Regular.woff") format("woff"),
+    url("../fonts/PTSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "PTSans-Bold";
+  src: url("../fonts/PTSans-Bold.eot");
+  src: url("../fonts/PTSans-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/PTSans-Bold.ttf") format("truetype"),
+    url("../fonts/PTSans-Bold.woff") format("woff"),
+    url("../fonts/PTSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Lifehack Sans";
+  src: url("../fonts/Lifehack Sans.eot");
+  src: url("../fonts/Lifehack Sans.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Lifehack Sans.ttf") format("truetype"),
+    url("../fonts/Lifehack Sans.woff") format("woff"),
+    url("../fonts/Lifehack Sans.woff2") format("woff2");
+}
+
+body {
+  background-color: var(--main-color);
+  font-family: var(--regular-font), sans-serif;
+  color: var(--text-color);
+}
+
+.section-title {
+  font-family: var(--section-font), sans-serif;
+  font-size: 50px;
+  line-height: 60px;
+}
+
+.container {
+  max-width: 1180px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.button {
+  background: var(--linear-gradient);
+  border-radius: var(--border-radius);
+  font-family: var(--bold-font);
+  font-size: 16px;
+  line-height: 21px;
+}
