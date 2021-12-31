@@ -69,9 +69,27 @@ body {
 }
 
 .section-title {
+  position: relative;
   font-family: var(--section-font);
   font-size: 50px;
   line-height: 60px;
+  font-weight: 400;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 30px;
+    background-color: var(--dark-color);
+    margin-left: 30px;
+  }
+}
+
+.section-subtitle {
+  margin-right: auto;
+  margin-left: 60px;
 }
 
 .logo {

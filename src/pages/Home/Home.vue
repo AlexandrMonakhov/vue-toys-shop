@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <section class="home">
     <div class="container">
       <div class="home-wrapper">
         <h1 class="title" id="home__title">
@@ -41,26 +41,33 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
+  <section class="cards">
+    <div class="container">
+      <div class="cards-wrapper">
+        <CardHeader :title="newProductsTitle" :subtitle="newProductsSubtitle" />
+        <Card :cardData="products" />
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
+import { newProducts, benefits } from "./data";
+import { Card, CardHeader } from "@/UI";
+
 export default {
   name: "app-home",
+  components: {
+    Card,
+    CardHeader,
+  },
   data() {
     return {
-      benefits: [
-        {
-          title: "Качество и безопасность",
-          text: "Мы используем только натуральные материалы и проводим тройной контроль качества",
-          image: "quality",
-        },
-        {
-          title: "Красивые игрушки",
-          text: "У нас вы найдете только красивые игрушки, вызывающие только положительные эмоции у детей",
-          image: "beauty",
-        },
-      ],
+      products: newProducts,
+      benefits: benefits,
+      newProductsTitle: "Новинки",
+      newProductsSubtitle: "Все новые товары за последний месяц",
     };
   },
 };
@@ -74,7 +81,7 @@ export default {
   padding-top: 30px;
 
   @media (max-width: 780px) {
-    background-position: center bottom -240px;
+    background-position: center top -162px;
   }
 
   &-info {
@@ -134,6 +141,10 @@ export default {
     padding: 18px 37px 18px 40px;
     color: var(--main-color);
     margin-bottom: 100px;
+
+    @media (max-width: 780px) {
+      margin-bottom: 0;
+    }
 
     &__text {
       margin-right: 20px;
