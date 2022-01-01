@@ -92,7 +92,7 @@ export default {
   background-image: url("./assets/img/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 30px;
+  padding: 30px 0 80px 0;
 
   @media (max-width: 780px) {
     background-position: center top -162px;
