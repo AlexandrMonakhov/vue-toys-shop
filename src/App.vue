@@ -8,9 +8,7 @@
 </template>
 
 <script>
-import Header from "@/components/Header/Header";
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
+import { Header, Navbar, Footer } from "@/components";
 import Home from "@/pages/Home/Home";
 export default {
   name: "App",

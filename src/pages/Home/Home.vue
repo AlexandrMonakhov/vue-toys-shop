@@ -42,10 +42,22 @@
       </div>
     </div>
   </section>
-  <section class="cards">
+  <section class="products">
     <div class="container">
-      <div class="cards-wrapper">
+      <div class="products-wrapper">
         <CardHeader :title="newProductsTitle" :subtitle="newProductsSubtitle" />
+        <Card :cardData="products" />
+      </div>
+    </div>
+  </section>
+
+  <section class="recommendations">
+    <div class="container">
+      <div class="recommendations-wrapper">
+        <CardHeader
+          :title="recommendationTitle"
+          :subtitle="recommendationSubtitle"
+        />
         <Card :cardData="products" />
       </div>
     </div>
@@ -68,6 +80,8 @@ export default {
       benefits: benefits,
       newProductsTitle: "Новинки",
       newProductsSubtitle: "Все новые товары за последний месяц",
+      recommendationTitle: "Рекомендации",
+      recommendationSubtitle: "Вам могут понравиться эти товары",
     };
   },
 };
