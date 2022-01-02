@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import { newProducts, benefits } from "./data";
+import { newProducts, benefits } from "@/seeders";
 import { Card, CardHeader } from "@/UI";
 
 export default {

@@ -1,9 +1,11 @@
 <template>
   <div class="cards">
-    <div
+    <router-link
       :class="`${cardInfo.card.type === 'new' ? 'card card-new' : 'card'}`"
       v-for="cardInfo in cardData"
       :key="cardInfo.id"
+      :to="`/${cardInfo.alias}`"
+      tag="div"
     >
       <img
         class="card__image"
@@ -20,7 +22,7 @@
         >
       </div>
       <button class="button card__button">В корзину</button>
-    </div>
+    </router-link>
   </div>
 </template>
 

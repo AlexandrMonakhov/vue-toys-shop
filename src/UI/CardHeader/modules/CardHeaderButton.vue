@@ -35,7 +35,6 @@ export default {
   props: {
     reverse: {
       type: Boolean,
-      required: true,
       default: false,
     },
   },
